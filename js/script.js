@@ -1,6 +1,5 @@
 const btnMobileNav = document.querySelector(".btn-mobile-nav");
 const navBar = document.querySelector(".nav-bar");
-console.log(btnMobileNav, navBar);
 
 function handleOnClick(event) {
   event.stopPropagation();
