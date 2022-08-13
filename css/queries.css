@@ -1,395 +1,247 @@
-/*
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Soft red: hsl(7, 99%, 70%)
-- Yellow: hsl(51, 100%, 49%)
-- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-- Dark blue (photography text): hsl(198, 62%, 26%)
-- Dark moderate cyan (footer): hsl(168, 34%, 41%)
-
-### Neutral
-
-- Very dark desaturated blue: hsl(212, 27%, 19%)
-- Very dark grayish blue: hsl(213, 9%, 39%)
-- Dark grayish blue: hsl(232, 10%, 55%)
-- Grayish blue: hsl(210, 4%, 67%)
-- White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Font
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 600
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700, 900
-
-## Icons
-
-We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
-
-*/
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/*BELOW 1440px (Desktop-Laptop)  */
+@media (max-width: 90em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/*BELOW 1200px (Landscape Tablets)  */
+@media (max-width: 75em) {
+  /* 9px / 16px */
+  html {
+    font-size: 56.25%;
+  }
+  .item-one,
+  .item-two,
+  .item-three,
+  .item-four,
+  .item-five,
+  .item-six {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .item-graphic-design,
+  .item-photography {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .about-company-header {
+    font-size: 3.4rem;
+  }
+  .testmonial {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
-html {
-  font-size: 62.5%;
+/*BELOW 944px (Tablets)  */
+@media (max-width: 59em) {
+  /* 8px / 16px */
+  html {
+    font-size: 50%;
+  }
+
+  .about-company {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-company .item-one {
+    order: 2;
+  }
+  .about-company .item-two {
+    order: 1;
+  }
+  .about-company .item-three {
+    order: 3;
+  }
+  .about-company .item-four {
+    order: 4;
+  }
+  .about-company .item-five {
+    order: 5;
+  }
+  .about-company .item-six {
+    order: 6;
+  }
+
+  .item-one,
+  .item-two,
+  .item-three,
+  .item-four,
+  .item-five,
+  .item-six {
+    width: 100%;
+    height: 70rem;
+    text-align: center;
+    padding-left: 10em;
+    padding-right: 10rem;
+  }
+  .testmonial {
+    flex-direction: column;
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .nav-bar {
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    flex-direction: column;
+    width: 75%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10rem;
+    transition: all 0.5s;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav--open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 3.8rem;
+  }
+  .nav-link-header {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: hsl(232, 10%, 55%) !important;
+  }
+  .contact-btn {
+    padding: 2rem 2.8rem 2rem 2.8rem !important;
+    color: hsl(212, 27%, 19%) !important;
+    background-color: hsl(51, 100%, 49%) !important;
+  }
 }
 
-a {
-  text-decoration: none;
+/*BELOW 760px (Small Tablets)  */
+@media (max-width: 48em) {
+  .nav-bar-section {
+    padding: 0 3rem;
+  }
+  .main-heading {
+    font-size: 4.8rem;
+    letter-spacing: 1rem;
+    margin-bottom: 12rem;
+  }
+
+  .item-one,
+  .item-two,
+  .item-three,
+  .item-four,
+  .item-five,
+  .item-six {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .item-graphic-design,
+  .item-photography {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .testimonial-section {
+    gap: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  .photography-header,
+  .graphic-design-header {
+    margin-top: 30rem;
+  }
+
+  .testmonial {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
 
-body {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
+/*BELOW 500px (Mobile)  */
+@media (max-width: 32em) {
+  .main-heading {
+    font-size: 5.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
 
-h1 {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-}
+  .item-one,
+  .item-two,
+  .item-three,
+  .item-four,
+  .item-five,
+  .item-six {
+    height: 40rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-.header {
-  background-image: url("../images/desktop/image-header.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 90rem;
-}
+  .item-graphic-design,
+  .item-photography {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 80rem;
+  }
 
-.logo {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
+  .testimonial-section {
+    gap: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
 
-.nav-bar-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  justify-items: center;
-  height: 10rem;
-  padding: 0 5rem;
-  margin-bottom: 3.4rem;
-}
+  .testimonial-details {
+    gap: 3.8rem;
+  }
+  .testimonial-image {
+    width: 10rem;
+  }
+  .testimonial-headig {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
 
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4.8rem;
-}
+  .testmonial {
+    gap: 3.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-.nav-list {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4.8rem;
-}
+  .header {
+    background-image: url("../images/mobile/image-header.jpg");
+    height: 60rem;
+  }
+  .item-two {
+    background-image: url("../images/mobile/image-transform.jpg");
+    background-size: cover;
+  }
+  .item-three {
+    background-image: url("../images/mobile/image-stand-out.jpg");
+    background-size: cover;
+  }
 
-.nav-link:link,
-.nav-link:visited {
-  font-size: 1.8rem;
-}
+  .item-five {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    background-size: cover;
+  }
 
-.nav-link-header {
-  color: hsl(0, 0%, 100%) !important;
-}
-
-.contact-btn {
-  border: none;
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: hsl(212, 27%, 19%);
-  background-color: hsl(0, 0%, 100%);
-  padding: 1rem 1.8rem 1rem 1.8rem;
-  border-radius: 25px;
-  text-transform: uppercase;
-  transition: all 0.4s;
-  cursor: pointer;
-}
-
-.contact-btn:hover {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(168, 34%, 41%);
-}
-
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  display: none;
-}
-
-.mobile-nav-menu-icon {
-  height: 4.8rem;
-  width: 4.8rem;
-  stroke: hsl(0, 0%, 100%);
-}
-
-.header-discription-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.main-heading {
-  text-align: center;
-  font-family: "Fraunces", serif;
-  font-size: 5.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1.4rem;
-  color: hsl(0, 0%, 100%);
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-
-.arrow-down {
-  width: 3.6rem;
-  height: auto;
-}
-.about-company {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item-one,
-.item-two,
-.item-three,
-.item-four,
-.item-five,
-.item-six {
-  width: 50%;
-  height: 70rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 13rem;
-  padding-right: 13rem;
-}
-
-.item-two {
-  background-image: url("../images/desktop/image-transform.jpg");
-}
-.item-three {
-  background-image: url("../images/desktop/image-stand-out.jpg");
-}
-
-.item-five {
-  background-image: url("../images/desktop/image-graphic-design.jpg");
-}
-
-.item-six {
-  background-image: url("../images/desktop/image-photography.jpg");
-}
-
-.about-company-header {
-  font-family: "Fraunces", serif;
-  font-size: 4.4rem;
-  font-weight: 700;
-  margin-bottom: 3.8rem;
-  color: hsl(212, 27%, 19%);
-}
-
-.about-company-text {
-  font-size: 1.8rem;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-}
-
-.link-learn-more:link,
-.link-learn-more:visited {
-  font-size: 2rem;
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: hsl(212, 27%, 19%);
-  text-decoration: underline;
-  text-decoration-color: hsl(7, 99%, 70%);
-  text-decoration-thickness: 5px;
-  text-underline-position: under left;
-}
-
-.item-graphic-design,
-.item-photography {
-  align-items: center;
-  padding-left: 15rem;
-  padding-right: 15rem;
-  text-align: center;
-}
-
-.photography-header,
-.graphic-design-header {
-  font-size: 2.8rem;
-  color: hsl(167, 40%, 24%);
-  margin-top: 40rem;
-}
-
-.graphic-design-text {
-  color: hsl(167, 40%, 24%);
-  margin-bottom: 0;
-}
-.photography-text {
-  color: hsl(198, 62%, 26%);
-  margin-bottom: 0;
-}
-
-.testimonial-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
-  margin-top: 15rem;
-  margin-bottom: 15rem;
-}
-
-.testimonial-headig {
-  font-family: "Fraunces", serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: hsl(210, 4%, 67%);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.testmonial {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 4.4rem;
-  padding-left: 14rem;
-  padding-right: 14rem;
-}
-.testimonial-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4.4rem;
-}
-.testimonial-image {
-  width: 10rem;
-  height: auto;
-  border-radius: 50%;
-}
-.testimonial-text {
-  color: hsl(213, 9%, 39%);
-  font-size: 1.8rem;
-  line-height: 1.6;
-  text-align: center;
-}
-.author-details {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  gap: 1.2rem;
-}
-.author-name {
-  font-family: "Fraunces", serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: hsl(212, 27%, 19%);
-}
-.author-designation {
-  font-size: 1.8rem;
-  color: hsl(210, 4%, 67%);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.gallery-item {
-  overflow: hidden;
-}
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.2);
-}
-.footer {
-  background-color: #96f2d7;
-  padding: 5.8rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.6rem;
-}
-svg.footer-logo path {
-  fill: red;
-}
-.footer-logo {
-  fill: hsl(167, 40%, 24%);
-  margin-bottom: 2rem;
-}
-
-.nav-bar-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 4.8rem;
-}
-
-.nav-bar-footer .nav-list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 4.8rem;
-}
-
-.nav-link-footer {
-  color: hsl(167, 40%, 24%) !important;
-}
-
-.social-icon {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.8rem;
-  margin-top: 6rem;
+  .item-six {
+    background-image: url("../images/mobile/image-photography.jpg");
+    background-size: cover;
+  }
 }
